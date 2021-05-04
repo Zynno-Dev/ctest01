@@ -15,14 +15,17 @@ namespace WebApplication1.Controllers
             return View();
         }
 
-        public string Random()
+        public IActionResult Test2(string name, int numTimes = 1)
         {
-            return "Este es el segundo test";
+            ViewData["Message"] = "Hello " + name;
+            ViewData["NumTimes"] = numTimes;
+
+            return View();
         }
 
-/*        public string Chizzi(DatosClassModel.Edad,Nombre,Apellido,DNI)
-        {
-            return HtmlEncoder.Default.Encode($"Nombre: {Nombre}, Apellido: {Apellido}, Edad: {Edad}, Dni: {DNI}");
-        } */
+        /*        public string Chizzi(DatosClassModel.Edad,Nombre,Apellido,DNI)
+                {
+                    return HtmlEncoder.Default.Encode($"Nombre: {Nombre}, Apellido: {Apellido}, Edad: {Edad}, Dni: {DNI}");
+                } */
     }
 }
