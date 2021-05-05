@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using WebApplication1.Models;
+using static WebApplication1.Models.DatosClassModel;
 
 namespace WebApplication1.Controllers
 {
@@ -33,5 +34,8 @@ namespace WebApplication1.Controllers
         {
             return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
         }
+
+        DatosClassModel hola = new DatosClassModel();
     }
+
 }
